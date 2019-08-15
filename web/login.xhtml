@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <f:event listener="#{db.criarTabelas()}" type="preRenderView" />
+        <f:event listener="#{admin.gerarADMdefault()}" type="preRenderView" />
+        
+        <title>Login</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat;
+            }
+
+            .divPainelLogin {
+                margin-top: 65px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 400px;
+                height: 480px
+            }
+            .divCabecaLogin {
+                display: table;
+                text-align: center;
+                background-color: #1E90FF;
+                width: 400px;
+                height: 50px
+            }
+            .divNomeLogin {
+                margin-top: 5px;
+            }
+            .labelLogin{
+                font-size: 30px;
+                color: #FFFFFF;
+                font-family: Century Gothic
+            }
+            .divCorpoExtLogin {
+                display: table;
+                text-align: center;
+                background-color: #FFFFFF;
+                width: 400px;
+                height: 430px
+            }
+            .divCorpoIntLogin {
+                width: 330px;
+                height: 410px;
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+            }
+            .div1 {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 10px;
+            }
+            .div2 {
+                display: table;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 20px;
+            }
+            .div3 {
+                display: table;
+                margin-top: 20px;
+            }
+            .div4 {
+                margin-top: 3px;
+            }
+            .div5 {
+                display: table;
+                margin-top: 20px;
+            }
+            .div6 {
+                margin-top: 3px;
+            }
+            .div7 {
+                margin-top: 8px;
+                margin-left: 253px;
+            }
+            .div8 {
+                margin-top: 60px;
+                margin-left: 204px;
+            }
+
+            .labelTitle {
+                font-size: 23px;
+                color: #000000;
+                font-family: Century Gothic
+            }
+            .labelTitleArea {
+                font-size: 19px;
+                color: #000000;
+                font-family: Century Gothic
+            }
+            .label3 {
+                font-size: 19px;
+                color: #000000;
+                font-family: Century Gothic
+            }
+
+            .imput1 {
+                font-family: Century Gothic;
+                font-size: 16px;
+                width: 100%;
+                padding: 6px 15px;
+                box-sizing: border-box;
+                border-bottom: 1px solid black;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                outline: none;
+            }
+            .imput1:focus {
+                background-color: #FFFFFF;
+            }
+            .imput2 {
+                font-family: Century Gothic;
+                font-size: 16px;
+                width: 100%;
+                padding: 6px 15px;
+                box-sizing: border-box;
+                border-bottom: 1px solid black;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                outline: none;
+            }
+            .imput2:focus {
+                background-color: #FFFFFF;
+            }
+
+            .bt1 {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 20px;
+                cursor: pointer;
+                float: left;
+                transition: 0.2s ease-out;
+            }
+            .bt1:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B;
+            }
+
+            .linkEsq {
+                font-size: 13px;
+                color: #000000;
+                font-family: Century Gothic
+            }
+            
+            .dial {
+                text-align: center;
+                color: #FFFFFF;
+                font-family: Century Gothic;
+                background-color: #008B8B;
+            }
+            .msgErro {
+                float: left;
+                width: 200px;
+                height: 30px;
+            }
+        </style>
+    </h:head>
+    
+    <h:body class="fundoBody">
+        <h:form class="form">
+            <div class="divPainelLogin">
+                <div class="divCabecaLogin">
+                    <div class="divNomeLogin">
+                        <p:outputLabel class="labelLogin" value="Login"/>
+                    </div>
+                </div>
+                <div class="divCorpoExtLogin">
+                    <div class="divCorpoIntLogin">
+                        <div class="div1">
+                            <p:outputLabel class="labelTitle" value="Acompanhamento Pediátrico"/>
+                        </div>
+                        <div class="div2">
+                            <img src="Imagens/logoUFS.jpg" alt="Logo"/>
+                        </div>
+                        <div class="div3">
+                            <p:outputLabel class="labelTitleArea" value="Usuário ou Email"/>
+                        </div>
+                        <div class="div4">
+                            <p:inputText class="imput1"
+                                         value="#{loginMB.login}"
+                                         maxlength="64"
+                                         pt:placeholder="Digite o usuário ou email"/>
+                        </div>
+                        <div class="div5">
+                            <p:outputLabel class="label3" value="Senha"/>
+                        </div>
+                        <div class="div6">
+                            <p:password
+                                class="imput2"
+                                value="#{loginMB.senha}"
+                                maxlength="20"
+                                pt:placeholder="Digite a senha"/>
+                        </div>
+
+                        <div class="msgErro">
+                            <h:messages id="msgErro" style="color: red"/>
+                        </div>
+                        
+                        <div class="div7">
+                            <p:commandButton value="Entrar" class="bt1" action="#{loginMB.efetuarLogin}" ajax="false"/>
+                        </div>
+                        <div class="div8">
+                            <h:outputLink class="linkEsq" value="resgatarSenha.xhtml" >Esqueci minha senha</h:outputLink>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

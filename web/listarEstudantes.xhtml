@@ -1,0 +1,285 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Estudantes</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat}
+
+            .divPainelMenu {
+                position: fixed}
+            .divCorpoMenu {
+                width: 200px;
+                height: 105px}
+            .divMenu1 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px}
+            .divMenu2 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px}
+            .divMenu3 {
+                display: table;
+                width: 200px;
+                height: 50px}
+            .divMenu4 {
+                margin-top: 10px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .btMenu1 {
+                background-image: url("Imagens/Icons/home.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btMenu1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5}
+            .btMenu2 {
+                background-image: url("Imagens/Icons/sair.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btMenu2:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5}
+            .btMenu3 {
+                background-image: url("Imagens/Icons/novoEstudante.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btMenu3:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5}
+            .btMenu4 {
+                background-image: url("Imagens/Icons/voltar.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu4:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            
+            .labelTitle {
+                font-size: 30px;
+                color:  #FFFFFF;
+                font-family: Century Gothic}
+            .labelTitleArea {
+                color:  #000000;
+                font-family: Century Gothic}
+            .divCabeca {
+                display: table;
+                background-color: #43CD80;
+                width: 650px;
+                height: 50px}
+            .divTitulo {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 5px;
+                text-align: center}
+            .divPesquise {
+                margin-left: 15px;
+                margin-top: 25px;
+                margin-bottom: 35px}
+            .divPainel {
+                display: table;
+                background-color: #FFFFFF;
+                width: 650px;
+                height: 450px;
+                margin-left: auto;
+                margin-right: auto}
+            .tab {
+                width: 650px;
+                height: 450px;
+                background-color: #FFFFFF}
+            .col1 {
+                border: none;
+                font-family: Century Gothic;
+                transition: 0.2s ease-out}
+            .col1:hover {
+                transition: 0.2s ease-out;
+                background-color: #a4d3ee}
+            .col2 {
+                font-family: Century Gothic;
+                transition: 0.2s ease-out}
+            .col2:hover {
+                transition: 0.2s ease-out;
+                background-color: #a4d3ee}
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+        </style>
+        
+        <script language="javascript" type="text/javascript">  
+        //<![CDATA[  
+            var tf1 = setFilterGrid("tab");  
+        //]]>  
+        </script> 
+        
+    </h:head>
+
+    <h:body class="fundoBody">
+        <h:form>
+            <div class="divPainelMenu">
+                <div class="divCorpoMenu">
+                    <div class="divMenu3">
+                        <p:commandButton class="btMenu3" value="Novo Estudante" actionListener="#{medics.initEst}" action="cadastrarEstudante.xhtml?faces-redirect=true"/>
+                    </div>
+                    <div class="divMenu4">
+                        <p:commandButton class="btMenu4" value="Voltar" action="medicoHome.xhtml?faces-redirect=true"/>
+                    </div>
+                    <div class="divMenu1">
+                        <p:commandButton class="btMenu1" value="Início" onclick="PF('inicio').show();"/>
+                    </div>
+                    <div class="divMenu2">
+                        <p:commandButton class="btMenu2" value="Sair" onclick="PF('sair').show();"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="divPainel">
+
+                <div class="divCabeca">
+                    <div class="divTitulo">
+                        <p:outputLabel class="labelTitle" value="Lista de Estudantes"/>
+                    </div>
+                </div>
+
+                <div class="divPesquise">
+                    <p:outputLabel class="labelTitleArea" value="Pesquise pelo nome do(a) estudante ou pela matricula nos campos abaixo"/>
+                </div>
+
+                <div class="tabEstud">
+                    <p:dataTable class="tab" emptyMessage="Nenhum estudante cadastrado!" widgetVar="estudTable"
+                    scrollable="true" scrollHeight="390" var="est"
+                    value="#{medics.listarEstudantes()}" selectionMode="single"
+                    selection="#{medics.estudante}" rowKey="#{est.nome}">
+
+                        <p:ajax event="rowSelect" listener="#{medics.exibirEstudante}"/>
+
+                        <p:column class="col1" filterStyle="font-family: Century Gothic"
+                        headerText="Nome" filterBy="#{est.nome}">
+                            <h:outputText value="#{est.nome}"/>
+                        </p:column>
+
+                        <p:column class="col2" filterStyle="font-family: Century Gothic"
+                        headerText="Matrícula" filterBy="#{est.matricula}">
+                            <h:outputText value="#{est.matricula}"/>
+                        </p:column>
+                    </p:dataTable>
+
+                    <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                        <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                        <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+                    </p:confirmDialog>
+
+                    <p:confirmDialog class="dial" header="Atenção!" message="Deseja ir para o menu inicial?" widgetVar="inicio" showEffect="fade" hideEffect="fade">
+                        <p:commandButton class="btSim" value="Sim" action="medicoHome.xhtml?faces-redirect=true"/>
+                        <p:commandButton class="btNao" value="Não" onclick="PF('inicio').hide()"/>
+                    </p:confirmDialog>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>

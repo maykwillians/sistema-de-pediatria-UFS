@@ -1,0 +1,17 @@
+Antes de iniciar o sistema, proceder da seguinte forma:
+
+1- Criar uma nova base de dados como o nome: Pediatria  (com "P" maiusculo)
+
+2- Login e senha do postgres que estão no código no pacote 'persistence.conexao' na classe 'Conexao'
+(modifique conforme o seu banco)
+Login: postgres
+Senha: siufs
+
+OBS 1: Administrador padrão cadastrado no sistema:
+Email: adicineia@gmail.com
+Usuário: adicineia
+Senha: admin
+(o login ao sistema pode ser feito tanto com o email como com o nome de usuário).
+
+OBS 2: Todos os drives e plugins necessários já serão instalados automaticamente,
+é só proceder corretamente como citado acima.

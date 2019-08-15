@@ -1,0 +1,294 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Consulta Detalhada</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat;
+            }
+
+            .divPainelMenu {
+                position: fixed;
+            }
+            .divCorpoMenu {
+                width: 200px;
+                height: 105px
+            }
+            .divMenu1 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu2 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu3 {
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .btMenu1 {
+                background-image: url("Imagens/Icons/home.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu2 {
+                background-image: url("Imagens/Icons/sair.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu2:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu3 {
+                background-image: url("Imagens/Icons/voltar.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu3:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            
+            .labelTitle {
+                font-size: 30px;
+                color:  #FFFFFF;
+                font-family: Century Gothic}
+            .divCabeca {
+                display: table;
+                background-color: #FF6EB4;
+                width: 650px;
+                height: 50px}
+            .divTitulo {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 5px;
+                text-align: center;
+            }
+            
+            .divPainel {
+                display: table;
+                background-color: #FFFFFF;
+                width: 650px;
+                height: 620px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .divPainelInterno {
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .div {
+                margin-top: 12px;
+            }
+            .divEv {
+                float: left;
+                margin-right: 7px;
+                margin-top: 12px;
+            }
+            .label {
+                color: #000000;
+                font-family: Century Gothic}
+            .labelx {
+                color: #6e22b4;
+                font-family: Century Gothic}
+            .dat {
+                color: #6e22b4;
+                font-family: Century Gothic}
+            .imput {
+                color: #363636;
+                resize: none;
+                font-family: Century Gothic;
+                font-size: 16px;
+                width: 520px;
+                height: 250px;
+                outline: none;
+                box-sizing: border-box}
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+        </style>
+    </h:head>
+
+    <h:body class="fundoBody">
+        
+        <div class="divPainelMenu">
+            <div class="divCorpoMenu">
+                <div>
+                    <h:form>
+                        <div>
+                            <div class="divMenu3">
+                                <p:commandButton class="btMenu3" value="Voltar" action="listarConsultasFemEst.xhtml?faces-redirect=true"/>
+                            </div>
+                            <div class="divMenu1">
+                                <p:commandButton class="btMenu1" value="Início" onclick="PF('inicio').show();"/>
+                            </div>
+                            <div class="divMenu2">
+                                <p:commandButton class="btMenu2" value="Sair" onclick="PF('sair').show();"/>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divPainel">
+            
+            <div class="divCabeca">
+                <div class="divTitulo">
+                    <p:outputLabel class="labelTitle" value="Consulta Detalhada"/>
+                </div>
+            </div>
+
+            <div class="divPainelInterno">
+                <div class="div">
+                    <p:outputLabel class="label" value="Médico Responsável: "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.nomeMedico}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Paciente: "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.nomeCrianca}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="CNS: "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.chaveCrianca}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Data da Consulta: "/>
+                    <h:outputText class="dat" value="#{estud.historico.data}">
+                        <f:convertDateTime pattern="dd/MM/yyyy"/>
+                    </h:outputText>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Peso do(a) paciente (g): "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.peso}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Estatura do(a) paciente (cm): "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.altura}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="IMC do(a) paciente: "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.imc}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Perímetro Cefálico do(a) paciente (cm): "/>
+                    <p:outputLabel class="labelx" value="#{estud.historico.perimetrocefalico}"/>
+                </div>
+                <div class="divEv">
+                    <p:outputLabel class="label" value="Evolução: "/>
+                </div>
+                <div class="div">
+                    <h:inputTextarea
+                        class="imput"
+                        readonly="true"
+                        value="#{estud.historico.comentarios}"/>
+                </div>
+            </div>
+            
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+            </p:confirmDialog>
+
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja ir para o menu inicial?" widgetVar="inicio" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="estudanteHome.xhtml?faces-redirect=true"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('inicio').hide()"/>
+            </p:confirmDialog>
+        </div>
+    </h:body>
+</html>

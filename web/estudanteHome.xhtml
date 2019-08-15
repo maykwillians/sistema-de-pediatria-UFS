@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Estudante Home</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+
+        <style type="text/css">
+
+            .est {
+                color: #FFFFFF;
+                font-family: Century Gothic}
+
+            .fundo {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat;
+            }
+
+            .painel {
+                width: 650px;
+                height: 445px;
+                display: table;
+                margin: auto;
+                margin-top: 80px;
+            }
+            
+            .flat1 {
+                background-color: #123722;
+                margin-bottom: 5px;
+                line-height:35px;
+                font-size:18px;
+                text-align:center;
+                height: 35px;
+                width: 636px;
+            }
+
+            .flat2 {
+                float: left;
+                height: 210px;
+                width: 210px;
+            }
+            .flat3 {
+                margin-left: 3px;
+                float: left;
+                height: 210px;
+                width: 423px;
+            }
+            .flat4 {
+                margin-top: 3px;
+                float: left;
+                height: 210px;
+                width: 423px;
+            }
+            .flat5 {
+                margin-top: 3px;
+                margin-left: 3px;
+                float: left;
+                height: 210px;
+                width: 210px;
+            }
+
+            .bt1 {
+                font-family: Century Gothic;
+                background-color: #123722;
+                border: 0px;
+                color: white;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: none;
+                outline: none;
+                text-decoration: none;
+                font-size: 28px;
+                transition: 0.2s ease-out;
+            }
+            .bt1:hover {
+                transition: 0.2s ease-out;
+                background-color: #091B11;
+            }
+
+            .bt2 {
+                font-family: Century Gothic;
+                background-color: #123722;
+                border: 0px;
+                color: white;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: none;
+                outline: none;
+                text-decoration: none;
+                font-size: 28px;
+                transition: 0.2s ease-out;
+            }
+            .bt2:hover {
+                transition: 0.2s ease-out;
+                background-color: #091B11;
+            }
+
+            .bt3 {
+                font-family: Century Gothic;
+                background-color: #123722;
+                border: 0px;
+                color: white;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: none;
+                outline: none;
+                text-decoration: none;
+                font-size: 28px;
+                transition: 0.2s ease-out;
+            }
+            .bt3:hover {
+                transition: 0.2s ease-out;
+                background-color: #091B11;
+            }
+
+            .btSair {
+                font-family: Century Gothic;
+                background-color: #123722;
+                border: 0px;
+                color: white;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                border: none;
+                outline: none;
+                text-decoration: none;
+                font-size: 28px;
+                transition: 0.2s ease-out;
+            }
+            .btSair:hover {
+                transition: 0.2s ease-out;
+                background-color: #091B11;
+            }
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+        </style>
+
+    </h:head>
+
+    <h:body class="fundo">
+
+        <div class="painel">
+
+            <div class="flat1">
+                <p:outputLabel class="est" value="Estudante: #{loginMB.estudante.nome}"/>
+            </div>
+
+            <h:form>
+                <div class="flat2">
+                    <p:commandButton class="bt1" value="Nova Consulta" actionListener="#{estud.initMaeCria}" action="cadastroInicialEst.xhtml?faces-redirect=true"/>
+                </div>
+
+                <div class="flat3">
+                    <p:commandButton class="bt2" value="Pacientes" action="listarPacientesEst.xhtml?faces-redirect=true"/>
+                </div>
+
+                <div class="flat4">
+                    <p:commandButton class="bt3" value="Meus Dados" action="dadosEst.xhtml?faces-redirect=true"/>
+                </div>
+
+                <div class="flat5">
+                    <p:commandButton class="btSair" value="Sair" onclick="PF('sair').show();"/>
+                </div>
+
+                <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                    <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                    <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+                </p:confirmDialog>
+            </h:form>
+        </div>
+    </h:body>
+</html>

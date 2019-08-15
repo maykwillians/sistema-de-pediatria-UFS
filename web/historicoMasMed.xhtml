@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Histórico</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat}
+            
+            .divPainelMenu {
+                position: fixed}
+            .divCorpoMenu {
+                width: 200px;
+                height: 105px}
+            .divMenu1 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu2 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu3 {
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu4 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu5 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu6 {
+                margin-top: 10px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .btMenu1 {
+                background-image: url("Imagens/Icons/home.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu2 {
+                background-image: url("Imagens/Icons/sair.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu2:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu3 {
+                background-image: url("Imagens/Icons/novaConsulta.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 13px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu3:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu4 {
+                background-image: url("Imagens/Icons/historico.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu4:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu5 {
+                background-image: url("Imagens/Icons/menino.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 20px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu5:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu6 {
+                background-image: url("Imagens/Icons/voltar.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu6:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            
+            .painelCentral {
+                background-color: #e7edf3;
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                height:620px;
+                width:800px}
+            .div01 {
+                display: table;
+                float: left;
+                margin-left: 76px;
+                margin-top: 20px}
+            .div02 {
+                display: table;
+                margin-left: 175px;
+                margin-top: 17px}
+            .label01 {
+                font-size: 19px;
+                color:  #363636;
+                font-family: Century Gothic}
+            .imput01 {
+                background-color: #e7edf3;
+                resize: none;
+                font-family: Century Gothic;
+                font-size: 20px;
+                width: 360px;
+                height: 60px;
+                border-bottom: 0;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                outline: none;
+                box-sizing: border-box}
+            .paneilGraphs {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                height:400px;
+                width:700px}
+            .divGraphPeso {
+                position:absolute;
+                z-index:1;
+                height:430px;
+                width:700px}
+            .chartPeso {
+                height:400px}
+            .divGraphAltura {
+                position:absolute;
+                z-index:2;
+                height:430px;
+                width:700px}
+            .chartAltura {
+                height:400px}
+            .divGraphIMC {
+                position:absolute;
+                z-index:3;
+                height:430px;
+                width:700px}
+            .chartIMC {
+                height:400px}
+            .divGraphPC {
+                position:absolute;
+                z-index:4;
+                height:430px;
+                width:700px}
+            .chartPC {
+                height:400px}
+            .painelBotoes {
+                display: table;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px}
+            
+            .divBtPeso {
+                margin-left: 10px;
+                width: 100px;
+                height: 80px;
+                float: left}
+            .divBtAltura {
+                margin-left: 10px;
+                width: 100px;
+                height: 80px;
+                float: left}
+            .divBtIMC {
+                margin-left: 10px;
+                width: 100px;
+                height: 80px;
+                float: left}
+            .divBtPer {
+                margin-left: 10px;
+                width: 100px;
+                height: 80px;
+                float: right}
+            .bt1 {
+                background-image: url("Imagens/Icons/graficoLinha.png");
+                background-repeat: no-repeat;
+                background-position-x: 33px;
+                background-position-y: 36px;
+                padding-bottom: 50px;
+                width: 100%;
+                height: 100%;
+                font-family: Century Gothic;
+                background-color: #f18c8c;
+                border: 0px;
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                transition: 0.2s ease-out}
+            .bt1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d87373}
+            .bt2 {
+                background-image: url("Imagens/Icons/graficoLinha.png");
+                background-repeat: no-repeat;
+                background-position-x: 33px;
+                background-position-y: 36px;
+                padding-bottom: 42px;
+                width: 100%;
+                height: 100%;
+                font-family: Century Gothic;
+                background-color: #36b9b2;
+                border: 0px;
+                color: black;
+                text-decoration: none;
+                font-size: 18px;
+                transition: 0.2s ease-out}
+            .bt2:hover {
+                transition: 0.2s ease-out;
+                background-color: #1ca099}
+            .bt3 {
+                background-image: url("Imagens/Icons/graficoLinha.png");
+                background-repeat: no-repeat;
+                background-position-x: 33px;
+                background-position-y: 36px;
+                padding-bottom: 50px;
+                width: 100%;
+                height: 100%;
+                font-family: Century Gothic;
+                background-color: #6687e7;
+                border: 0px;
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                transition: 0.2s ease-out}
+            .bt3:hover {
+                transition: 0.2s ease-out;
+                background-color: #4169e1}
+            .bt4 {
+                background-image: url("Imagens/Icons/graficoLinha.png");
+                background-repeat: no-repeat;
+                background-position-x: 33px;
+                background-position-y: 36px;
+                padding-bottom: 50px;
+                width: 100%;
+                height: 100%;
+                font-family: Century Gothic;
+                background-color: #8ba263;
+                border: 0px;
+                color: black;
+                text-decoration: none;
+                font-size: 20px;
+                transition: 0.2s ease-out}
+            .bt4:hover {
+                transition: 0.2s ease-out;
+                background-color: #6e8b3d}
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+        </style>
+
+        <script type="text/javascript">
+
+            function pesoIN(el) {
+                var div = document.getElementById('pesoID');
+                div.style.visibility = 'visible';
+            }
+            function pesoOUT(el) {
+                var div = document.getElementById('pesoID');
+                div.style.visibility = 'hidden';
+            }
+
+            function alturaIN(el) {
+                var div = document.getElementById('alturaID');
+                div.style.visibility = 'visible';
+            }
+
+            function alturaOUT(el) {
+                var div = document.getElementById('alturaID');
+                div.style.visibility = 'hidden';
+            }
+
+            function imcIN(el) {
+                var div = document.getElementById('imcID');
+                div.style.visibility = 'visible';
+            }
+
+            function imcOUT(el) {
+                var div = document.getElementById('imcID');
+                div.style.visibility = 'hidden';
+            }
+
+            function pcIN(el) {
+                var div = document.getElementById('pcID');
+                div.style.visibility = 'visible';
+            }
+
+            function pcOUT(el) {
+                var div = document.getElementById('pcID');
+                div.style.visibility = 'hidden';
+            }
+
+        </script>
+
+    </h:head>
+
+    <h:body class="fundoBody">
+
+        <div class="divPainelMenu">
+            <div class="divCorpoMenu">
+                <div>
+                    <h:form>
+                        <div class="divMenu3">
+                            <p:commandButton class="btMenu3" value="Nova Consulta" actionListener="#{medics.initCons}" action="#{medics.formNovaConsulta}"/>
+                        </div>
+                        <div class="divMenu4">
+                            <p:commandButton class="btMenu4" value="Histórico de Consultas" action="listarConsultasMasMed.xhtml?faces-redirect=true"/>
+                        </div>
+                        <div class="divMenu5">
+                            <p:commandButton class="btMenu5" value="Dados do Paciente" action="exibirPacienteMasMed.xhtml?faces-redirect=true"/>
+                        </div>
+                        <div class="divMenu6">
+                            <p:commandButton class="btMenu6" value="Voltar" action="listarPacientesMed.xhtml?faces-redirect=true"/>
+                        </div>
+                        <div class="divMenu1">
+                            <p:commandButton class="btMenu1" value="Início" onclick="PF('inicio').show();"/>
+                        </div>
+                        <div class="divMenu2">
+                            <p:commandButton class="btMenu2" value="Sair" onclick="PF('sair').show();"/>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="painelCentral">
+            
+            <div class="div01">
+                <p:outputLabel class="label01" value="Paciente:"/>
+            </div>
+            <div class="div02">
+                <h:inputTextarea
+                    readonly="true"
+                    value="#{medics.crianca.nome}"
+                    class="imput01"/>
+            </div>
+            
+            <div class="paneilGraphs">
+                <div class="divGraphPeso" id="pesoID" style="visibility: visible">
+                    <p:chart class="chartPeso" type="line" model="#{graphPesoMed.graphPesoMed}"
+                             widgetVar="chart"/>
+                </div>
+                <div class="divGraphAltura" id="alturaID" style="visibility: hidden">
+                    <p:chart class="chartAltura" type="line" model="#{graphAlturaMed.graphAlturaMed}" widgetVar="chart2"/>
+                </div>
+                <div class="divGraphIMC" id="imcID" style="visibility: hidden">
+                    <p:chart class="chartIMC" type="line" model="#{graphIMCMed.graphIMCMed}" widgetVar="chart3"/>
+                </div>
+                <div class="divGraphPC" id="pcID" style="visibility: hidden">
+                    <p:chart class="chartPC" type="line" model="#{graphPCMed.graphPCMed}" widgetVar="chart4"/>
+                </div>
+            </div>
+
+            <div class="painelBotoes">
+                <h:form>
+                    <div class="divBtPeso">
+                        <p:commandButton class="bt1" onclick="pesoIN('pesoID'); alturaOUT('alturaID'); imcOUT('imcID'); pcOUT('pcID')" value="Peso"/>
+                    </div>
+                    <div class="divBtAltura">
+                        <p:commandButton class="bt2" onclick="alturaIN('alturaID'); pesoOUT('pesoID'); imcOUT('imcID'); pcOUT('pcID')" value="Estatura"/>
+                    </div>
+                    <div class="divBtIMC">
+                        <p:commandButton class="bt3" onclick="imcIN('imcID'); pesoOUT('pesoID'); alturaOUT('alturaID'); pcOUT('pcID')" value="IMC"/>
+                    </div>
+                    <div class="divBtPer">
+                        <p:commandButton class="bt4" onclick="pcIN('pcID'); pesoOUT('pesoID'); alturaOUT('alturaID'); imcOUT('imcID')" value="P.Cef."/>
+                    </div>
+                </h:form>
+            </div>
+            
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+            </p:confirmDialog>
+
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja ir para o menu inicial?" widgetVar="inicio" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="medicoHome.xhtml?faces-redirect=true"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('inicio').hide()"/>
+            </p:confirmDialog>
+        </div>
+    </h:body>
+</html>

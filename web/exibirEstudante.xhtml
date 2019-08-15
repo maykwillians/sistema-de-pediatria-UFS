@@ -1,0 +1,322 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Estudante</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat;
+            }
+
+            .divPainelMenu {
+                position: fixed;
+            }
+            .divCorpoMenu {
+                width: 200px;
+                height: 105px
+            }
+            .divMenu1 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu2 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu3 {
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu4 {
+                margin-top: 10px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .btMenu1 {
+                background-image: url("Imagens/Icons/home.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu2 {
+                background-image: url("Imagens/Icons/sair.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu2:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu3 {
+                background-image: url("Imagens/Icons/excluir.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu3:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu4 {
+                background-image: url("Imagens/Icons/voltar.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu4:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            
+            .labelTitle {
+                font-size: 30px;
+                color:  #FFFFFF;
+                font-family: Century Gothic}
+            .divCabeca {
+                display: table;
+                background-color: #8b4789;
+                width: 650px;
+                height: 50px}
+            .divTitulo {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 5px;
+                text-align: center;
+            }
+            .divPainel {
+                display: table;
+                background-color: #FFFFFF;
+                width: 650px;
+                height: 610px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .divPainelInterno {
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .div {
+                margin-top: 12px;
+            }
+            .divEv {
+                float: left;
+                margin-right: 7px;
+                margin-top: 12px;
+            }
+            .label {
+                color: #000000;
+                font-family: Century Gothic}
+            .labelx {
+                color: #6e22b4;
+                font-family: Century Gothic}
+            .imput {
+                color: #363636;
+                resize: none;
+                font-family: Century Gothic;
+                font-size: 16px;
+                width: 520px;
+                height: 250px;
+                outline: none;
+                box-sizing: border-box}
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .dialSuc {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+            .btOK {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btOK:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+        </style>
+    </h:head>
+
+    <h:body class="fundoBody">
+        
+        <div class="divPainelMenu">
+            <div class="divCorpoMenu">
+                <div>
+                    <h:form>
+                        <div>
+                            <div class="divMenu3">
+                                <p:commandButton class="btMenu3" value="Excluir" action="#{medics.verificarEstudante}"/>
+                            </div>
+                            <div class="divMenu4">
+                                <p:commandButton class="btMenu4" value="Voltar" action="listarEstudantes.xhtml?faces-redirect=true"/>
+                            </div>
+                            <div class="divMenu1">
+                                <p:commandButton class="btMenu1" value="Início" onclick="PF('inicio').show();"/>
+                            </div>
+                            <div class="divMenu2">
+                                <p:commandButton class="btMenu2" value="Sair" onclick="PF('sair').show();"/>
+                            </div>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="divPainel">
+            
+            <div class="divCabeca">
+                <div class="divTitulo">
+                    <p:outputLabel class="labelTitle" value="Estudante"/>
+                </div>
+            </div>
+
+            <div class="divPainelInterno">
+                <div class="div">
+                    <p:outputLabel class="label" value="Nome: "/>
+                    <p:outputLabel class="labelx" value="#{medics.estudante.nome}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="E-mail: "/>
+                    <p:outputLabel class="labelx" value="#{medics.estudante.email}"/>
+                </div>
+                <div class="div">
+                    <p:outputLabel class="label" value="Matrícula Estudantil: "/>
+                    <p:outputLabel class="labelx" value="#{medics.estudante.matricula}"/>
+                </div>
+            </div>
+            
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+            </p:confirmDialog>
+
+            <p:confirmDialog class="dial" header="Atenção!" message="Deseja ir para o menu inicial?" widgetVar="inicio" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" action="medicoHome.xhtml?faces-redirect=true"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('inicio').hide()"/>
+            </p:confirmDialog>
+            
+            <p:confirmDialog class="dial" header="Atenção!" message="Tem certeza?" widgetVar="pergunta" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btSim" value="Sim" onclick="PF('sucesso').show()" action="#{medics.excluirEstudante}"/>
+                <p:commandButton class="btNao" value="Não" onclick="PF('pergunta').hide()"/>
+            </p:confirmDialog>
+            
+            <p:confirmDialog class="dialSuc" header="Sucesso!" message="Estudante excluído(a) com sucesso!" widgetVar="sucesso" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btOK" value="OK" action="listarEstudantes.xhtml?faces-redirect=true"/>
+            </p:confirmDialog>
+            
+            <p:confirmDialog class="dialSuc" header="Atenção!" message="Não pode ser excluído(a) porque já possui consulta" widgetVar="semSucesso" showEffect="fade" hideEffect="fade">
+                <p:commandButton class="btOK" value="OK" onclick="PF('semSucesso').hide()"/>
+            </p:confirmDialog>
+        </div>
+    </h:body>
+</html>

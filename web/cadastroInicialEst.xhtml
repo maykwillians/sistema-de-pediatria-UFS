@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Cadastro</title>
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Century+Gothic"/>
+        <style type="text/css">
+
+            .fundoBody {
+                background-image: url("Imagens/fundo_1-1.png");
+                background-repeat: no-repeat;
+            }
+
+            .divPainelMenu {
+                position: fixed;
+            }
+            .divCorpoMenu {
+                width: 200px;
+                height: 105px
+            }
+            .divMenu1 {
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .divMenu2 {
+                margin-top: 2px;
+                display: table;
+                width: 200px;
+                height: 50px
+            }
+            .btMenu1 {
+                background-image: url("Imagens/Icons/home.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu1:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+            .btMenu2 {
+                background-image: url("Imagens/Icons/sair.png");
+                background-repeat: no-repeat;
+                background-position-x: 9px;
+                background-position-y: 9px;
+                padding-left: 30px;
+                font-family: Century Gothic;
+                background-color: #fffefb;
+                border: 0px;
+                color: black;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                transition: 0.2s ease-out;
+            }
+            .btMenu2:hover {
+                transition: 0.2s ease-out;
+                background-color: #d8dfe5;
+            }
+
+            .cadastro {
+                margin-left: auto;
+                margin-right: auto;
+                width: 650px;
+                height: 800px;
+            }
+            .divPainelExt {
+                display: table;
+                background-color: #FFFFFF;
+                width: 650px;
+                height: 750px}
+            .cabecaForm {
+                display: table;
+                background-color: #43CD80;
+                width: 650px;
+                height: 50px}
+            .divPainelInt {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                width: 550px;
+                height: 750px}
+
+            .divCad {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 5px;
+                text-align: center;
+            }
+            .div1 {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .div2 {
+                float: left;
+                margin-top: 20px;
+            }
+            .divMsgErro {
+                text-align: center;
+                font-size: 14px;
+                font-family: Century Gothic;
+                color: red;
+                width: 100%;
+                height: 0px;
+            }
+            .div3 {
+                margin-top: 3px;
+            }
+            .div4 {
+                float: left;
+                margin-top: 20px;
+            }
+            .div5{
+                margin-top: 3px;
+            }
+            .div6{
+                float: left;
+                margin-top: 20px;
+            }
+            .div7{
+                margin-top: 18px;
+                margin-left: 70px;
+            }
+            .div8{
+                float: left;
+                margin-top: 15px;
+            }
+            .div9{
+                margin-top: 3px;
+            }
+            .div10 {
+                margin-right: auto;
+                margin-left: auto;
+                display: table;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .div11 {
+                float: left;
+                margin-top: 20px;
+            }
+            .div12{
+                margin-top: 3px;
+            }
+            .div13 {
+                float: left;
+                margin-top: 20px;
+            }
+            .div14 {
+                margin-top: 3px;
+            }
+            .div15 {
+                float: left;
+                margin-top: 20px;
+            }
+            .div16 {
+                margin-top: 3px;
+            }
+            .div17 {
+                float: left;
+                margin-top: 35px;
+            }
+            .div18 {
+                margin-top: 35px;
+                float: right;
+            }
+
+            .oneRadio {
+                color:  #000000;
+                font-family: Century Gothic}
+
+            .selectItem2 {
+                color:  #000000;
+                font-family: Century Gothic}
+
+            .labelTitle {
+                font-size: 30px;
+                color:  #FFFFFF;
+                font-family: Century Gothic}
+
+            .labelTitleArea {
+                font-size: 23px;
+                color:  #000000;
+                font-family: Century Gothic}
+
+            .label {
+                color:  #000000;
+                font-family: Century Gothic}
+
+            .imput {
+                font-family: Century Gothic;
+                font-size: 16px;
+                width: 100%;
+                padding: 6px 15px;
+                box-sizing: border-box;
+                border-bottom: 1px solid black;
+                border-left: 0;
+                border-right: 0;
+                border-top: 0;
+                outline: none;
+            }
+            .imput:focus {
+                background-color: #F0FFF0;
+            }
+
+            .bt1 {
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                outline: none;
+                font-size: 22px;
+                cursor: pointer;
+                float: left;
+                transition: 0.2s ease-out;
+            }
+            .bt1:not(:last-child) {
+                border-right: none; /* Prevent double borders */
+            }
+            .bt1:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F;
+            }
+
+            .bt2 {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                outline: none;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 22px;
+                cursor: pointer;
+                float: left;
+                transition: 0.2s ease-out;
+            }
+            .bt2:not(:last-child) {
+                border-right: none; /* Prevent double borders */
+            }
+            .bt2:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B;
+            }
+
+            #menu {
+                position: fixed;
+                right: 0;
+                top: 50%;
+                width: 8em;
+                margin-top: -2.5em;
+            }
+
+            .confD {
+                text-align: center;
+                color: #FFFFFF;
+                font-family: Century Gothic;
+                background-color: #008B8B;
+            }
+            
+            .dial {
+                font-family: Century Gothic;
+                background-color: #d9e2fb}
+            .btSim {
+                font-family: Century Gothic;
+                background-color: #1C86EE;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btSim:hover {
+                transition: 0.2s ease-out;
+                background-color: #104E8B}
+            .btNao {
+                float: right;
+                font-family: Century Gothic;
+                background-color: #EE6A50;
+                border: 0px;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                outline: none;
+                display: inline-block;
+                font-size: 17px;
+                cursor: pointer;
+                transition: 0.2s ease-out}
+            .btNao:hover {
+                transition: 0.2s ease-out;
+                background-color: #8B3E2F}
+        </style>
+
+        <script language="JavaScript">
+            //<![CDATA[
+            function mascara(o, f) {
+                v_obj = o
+                v_fun = f
+                setTimeout("execMascara()", 1)
+            }
+            /*Função que Executa os objetos*/
+            function execMascara() {
+                v_obj.value = v_fun(v_obj.value)
+            }
+
+            /*Função que padroniza CPF*/
+            function cpf(v) {
+                v = v.replace(/\D/g, "")
+                v = v.replace(/(\d{3})(\d)/, "$1.$2")
+                v = v.replace(/(\d{3})(\d)/, "$1.$2")
+
+                v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2")
+                return v
+            }
+            /*Função que padroniza CNS*/
+            function sus(v) {
+                v = v.replace(/\D/g, "")
+                v = v.replace(/(\d{3})(\d)/, "$1 $2")
+                v = v.replace(/(\d{4})(\d)/, "$1 $2")
+                v = v.replace(/(\d{4})(\d)/, "$1 $2")
+                return v
+            }
+            /*Função que padroniza DATA*/
+            function data(v) {
+                v = v.replace(/\D/g, "")
+                v = v.replace(/(\d{2})(\d)/, "$1/$2")
+                v = v.replace(/(\d{2})(\d)/, "$1/$2")
+                return v
+            }
+
+            /*Função que padroniza telefone*/
+            function mtel(v) {
+                v = v.replace(/\D/g, ""); //Remove tudo o que não é dígito
+                v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+                v = v.replace(/(\d)(\d{4})$/, "$1-$2"); //Coloca hífen entre o quarto e o quinto dígitos
+                return v;
+            }
+            function id(el) {
+                return document.getElementById(el);
+            }
+            window.onload = function () {
+                id('telefone').onkeypress = function () {
+                    mascara(this, mtel);
+                }
+            }
+            
+            function mascaraNome(e) {
+                var expressao;
+                expressao = /[çáéíóúÁÉÍÓÚâêîôûÂÊÎÔÛãõÃÕa-zA-Z ]/;
+                if(expressao.test(String.fromCharCode(e.keyCode))) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+            
+            function maiusculo(id) {
+                //palavras para ser ignoradas
+                var wordsToIgnore = ["do", "Do", "dO", "DO",
+                                     "da", "Da", "dA", "DA",
+                                     "das", "Das", "DAs", "dAs", "dAS", "DAS", "daS", "DaS",
+                                     "dos", "Dos", "DOs", "dOs", "dOS", "DOS", "doS", "DoS",
+                                     "de", "De", "dE", "DE",
+                                     "di", "Di", "dI", "DI"],
+                minLength = 1;
+                var str = $('#'+id).val(); 
+                var getWords = function(str) {
+                    return str.match(/\S+\s*/g);
+                }
+                $('#'+id).each(function () {
+                    var words = getWords(this.value);
+                    $.each(words, function (i, word) {
+                        // somente continua se a palavra nao estiver na lista de ignorados
+                        if (wordsToIgnore.indexOf($.trim(word)) == -1 && $.trim(word).length > minLength) {
+                            words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase();
+                        } else{
+                        words[i] = words[i].toLowerCase();}
+                    });
+                    this.value = words.join("");
+                });
+            };
+            //]]>
+        </script>
+
+    </h:head>
+
+    <h:body class="fundoBody">
+
+        <h:form prependId="false">
+            <div class="divPainelMenu">
+                <div class="divCorpoMenu">
+                    <div>
+                        <div class="divMenu1">
+                            <p:commandButton class="btMenu1" value="Início" onclick="PF('inicio').show();"/>
+                        </div>
+                        <div class="divMenu2">
+                            <p:commandButton class="btMenu2" value="Sair" onclick="PF('sair').show();"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cadastro">
+                <div class="cabecaForm">
+                    <div class="divCad">
+                        <p:outputLabel class="labelTitle" value="Cadastro"/>
+                    </div>
+                </div>
+
+                <div class="divPainelExt">
+                    <div class="divPainelInt">
+                        <div class="div1">
+                            <p:outputLabel class="labelTitleArea" value="Dados da Criança"/>
+                        </div>
+
+                        <div class="div2">
+                            <p:outputLabel class="label" value="CNS *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="cns" id="cns" class="msgErro"/>
+                        </div>
+                        <div class="div3">
+                            <p:inputMask
+                                class="imput"
+                                mask="999 9999 9999 9999"
+                                value="#{estud.crianca.cartaoSUS}"
+                                pt:placeholder="digite o número do CNS (Cartão Nacional do SUS)"/>
+                        </div>
+
+                        <div class="div4">
+                            <p:outputLabel class="label" value="Nome Completo *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="nome" id="nome" class="msgErro"/>
+                        </div>
+                        <div class="div5">
+                            <p:inputText
+                                class="imput"
+                                id="nomeMaiusculo"
+                                maxlength="64"
+                                value="#{estud.crianca.nome}"
+                                onkeypress="return mascaraNome(event)"
+                                onblur="maiusculo('nomeMaiusculo')"
+                                pt:placeholder="digite o nome completo"/>
+                        </div>
+
+                        <div class="div6">
+                            <p:outputLabel class="label" value="Sexo: *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="sexo" id="sexo" class="msgErro"/>
+                        </div>
+
+                        <div class="div7">
+                            <h:selectOneRadio class="oneRadio" value="#{estud.crianca.sexo}">
+                                <f:selectItem class="selectItem1" itemLabel="Masculino" itemValue="M" />
+                                <f:selectItem class="selectItem2" itemLabel="Feminino" itemValue="F" />
+                            </h:selectOneRadio>
+                        </div>
+
+                        <div class="div8">
+                            <p:outputLabel class="label" value="Data de nascimento *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="data" id="data" class="msgErro"/>
+                        </div>
+                        <div class="div9">
+                            <p:inputMask
+                                class="imput"
+                                mask="99/99/9999"
+                                pt:placeholder="digite a data de nascimento"
+                                value="#{estud.crianca.dataNascimento}"/>
+                        </div>
+
+                        <div class="div10">
+                            <p:outputLabel class="labelTitleArea" value="Dados da Mãe ou Responsável"/>
+                        </div>
+
+                        <div class="div11">
+                            <p:outputLabel class="label" value="Nome Completo *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="nomeMae" id="nomeMae" class="msgErro"/>
+                        </div>
+                        <div class="div12">
+                            <p:inputText
+                                class="imput"
+                                id="nomeMaiusculo2"
+                                maxlength="64"
+                                onkeypress="return mascaraNome(event)"
+                                onblur="maiusculo('nomeMaiusculo2')"
+                                pt:placeholder="digite o nome completo"
+                                value="#{estud.mae.nome}"/>
+                        </div>
+
+                        <div class="div13">
+                            <p:outputLabel class="label" value="CPF *"/>
+                        </div>
+                        <div class="divMsgErro">
+                            <h:messages for="cpf" id="cpf" class="msgErro"/>
+                        </div>
+                        <div class="div14">
+                            <p:inputMask
+                                class="imput"
+                                mask="999.999.999-9"
+                                pt:placeholder="digite o número do CPF (apenas números)"
+                                value="#{estud.mae.cpf}"/>
+                        </div>
+
+                        <div class="div15">
+                            <p:outputLabel class="label" value="Telefone (DDD + Número) (Opcional)"/>
+                        </div>
+                        <div class="div16">
+                            <p:inputMask
+                                class="imput"
+                                mask="(99) 99999-9999"
+                                pt:placeholder="Informe um telefone para contato"
+                                value="#{estud.mae.telefone}"/>
+                        </div>
+
+                        <div class="div17">
+                            <p:commandButton class="bt1" value="Cancelar" onclick="PF('cancelar').show();"/>
+                        </div>
+                        <div class="div18">
+                            <p:commandButton class="bt2" value="Avançar" actionListener="#{estud.initCons}" action="#{estud.formPriConsulta}" ajax="false"/>
+                        </div>
+
+                        <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Cancelar?" widgetVar="cancelar" showEffect="fade" hideEffect="fade">
+                            <p:commandButton class="btSim" value="Sim" action="estudanteHome.xhtml?faces-redirect=true"/>
+                            <p:commandButton class="btNao" value="Não" onclick="PF('cancelar').hide()"/>
+                        </p:confirmDialog>
+                        
+                        <p:confirmDialog class="dial" header="Atenção!" message="Deseja Realmente Sair?" widgetVar="sair" showEffect="fade" hideEffect="fade">
+                            <p:commandButton class="btSim" value="Sim" action="#{loginMB.logout}"/>
+                            <p:commandButton class="btNao" value="Não" onclick="PF('sair').hide()"/>
+                        </p:confirmDialog>
+                        
+                        <p:confirmDialog class="dial" header="Atenção!" message="Deseja ir para o menu inicial?" widgetVar="inicio" showEffect="fade" hideEffect="fade">
+                            <p:commandButton class="btSim" value="Sim" action="estudanteHome.xhtml?faces-redirect=true"/>
+                            <p:commandButton class="btNao" value="Não" onclick="PF('inicio').hide()"/>
+                        </p:confirmDialog>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
